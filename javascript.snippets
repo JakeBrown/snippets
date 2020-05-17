@@ -1,0 +1,13 @@
+snippet toggle "simple function def" b
+const Toggle = {} => { 
+	const { isToggled, setToggle} = useState(false)
+	return (
+		<div>
+			<button
+				// setState accepts a function with the first parameter being the current state, the return value of the function will update the state.
+				onClick={ () => setToggle(prevState=> !prevState) }
+			>Toggle</button>
+		</div>
+	)
+}
+endsnippet
